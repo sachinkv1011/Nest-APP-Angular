@@ -16,6 +16,7 @@ export class EmployeeLoginComponent {
       "password":this.password
     }
     console.log(data)
+    
   }
 
 }
