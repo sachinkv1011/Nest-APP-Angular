@@ -3,24 +3,47 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule} from '@angular/common/http';
 import { EmployeeLoginComponent } from './employee-login/employee-login.component';
 import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
-import { AddEmployeeComponent } from './add-employee/add-employee.component';
+
+import { SecurityAddComponent } from './security-add/security-add.component';
+import { AddEmployeesComponent } from './add-employees/add-employees.component';
+import { AdminloginComponent } from './adminlogin/adminlogin.component';
+import { SearchEmployeeComponent } from './search-employee/search-employee.component';
+import { ViewAllEmployeeComponent } from './view-all-employee/view-all-employee.component';
+import { ViewSecurityComponent } from './view-security/view-security.component';
+import { SearchSecurityComponent } from './search-security/search-security.component';
 
 const myRoute:Routes=[
   {
-    path:"",component:AdminLoginComponent
+    path:"",component:AdminloginComponent
   },
   {
     path:"employeeLogin",component:EmployeeLoginComponent
   },
   {
-    path:"addEmployee",component:AddEmployeeComponent
-  }
+    path:"addEmployee",component:AddEmployeesComponent
+  },
+  {
+    path:"addSecurity" ,component:SecurityAddComponent
+  },
+  {
+    path:"searchEmployee",component:SearchEmployeeComponent
+  },
+  {
+    path:"viewallemployee",component:ViewAllEmployeeComponent
+  },
+  {
+    path:"viewSecurity",component:ViewSecurityComponent
+  },
+  {
+
+
+  path:"searchSecurity",component:SearchSecurityComponent
+  }  
 
 
 
@@ -30,10 +53,16 @@ const myRoute:Routes=[
 @NgModule({
   declarations: [
     AppComponent,
-    AdminLoginComponent,
     EmployeeLoginComponent,
     AdminNavbarComponent,
-    AddEmployeeComponent
+  
+    SecurityAddComponent,
+    AddEmployeesComponent,
+    AdminloginComponent,
+    SearchEmployeeComponent,
+    ViewAllEmployeeComponent,
+    ViewSecurityComponent,
+    SearchSecurityComponent
   ],
   imports: [
     BrowserModule,

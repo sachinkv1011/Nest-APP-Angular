@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { ApiService } from '../api.service';
 
 @Component({
-  selector: 'app-add-employee',
-  templateUrl: './add-employee.component.html',
-  styleUrls: ['./add-employee.component.css']
+  selector: 'app-add-employees',
+  templateUrl: './add-employees.component.html',
+  styleUrls: ['./add-employees.component.css']
 })
-export class AddEmployeeComponent {
+export class AddEmployeesComponent {
   constructor(private api:ApiService){}
 
   empName=""
@@ -27,13 +27,23 @@ export class AddEmployeeComponent {
     }
     console.log(data)
     this.api.addEmployee(data).subscribe(
-      (response)=>{
+      (response:any)=>{
         console.log(response)
-        if(response=="success"){
+        if(response.status=="success"){
           alert("employee added successfully")
+          this.empName=""
+          this.empEmail=""
+          this.empDesignation=""
+          this.empPhone=""
+          this.username=""
+          this.password=""
+        }
+        else{
+          alert("something has went wrong")
         }
       }
     )
   }
+
 
 }
