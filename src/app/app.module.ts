@@ -17,6 +17,9 @@ const myRoute:Routes=[
   },
   {
     path:"employeeLogin",component:EmployeeLoginComponent
+  },
+  {
+    path:"addEmployee",component:AddEmployeeComponent
   }
 
 

@@ -21,7 +21,7 @@ export class AdminLoginComponent {
     console.log(data)
     if (this.username=="admin" && this.password=="12345") {
       alert("valid login")
-      this.route.navigate(['/viewAllEmployee'])
+      this.route.navigate(['/addEmployee'])
       
     } else {
       alert("Invalid login")
