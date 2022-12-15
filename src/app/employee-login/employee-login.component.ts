@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-employee-login',
@@ -6,6 +8,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./employee-login.component.css']
 })
 export class EmployeeLoginComponent {
+  constructor(private api:ApiService,private route:Router){}
 
   username=""
   password=""
@@ -16,6 +19,15 @@ export class EmployeeLoginComponent {
       "password":this.password
     }
     console.log(data)
+    this.api.employeeLogin(data).subscribe(
+      (response:any)=>{
+        let userId=response.userId;
+        localStorage.setItem("userId",userId)
+        this.route.navigate(['/employeeprofile'])
+
+      }
+    )
+
     
   }
 
