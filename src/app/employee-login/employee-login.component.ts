@@ -23,7 +23,7 @@ export class EmployeeLoginComponent {
       (response:any)=>{
         let userId=response.userId;
         localStorage.setItem("userId",userId)
-        this.route.navigate(['/employeeprofile'])
+        this.route.navigate(['/employeeProfile'])
 
       }
     )

@@ -24,16 +24,9 @@
                     <label for="" class="form-label">Password</label>
                     <input name="password" [(ngModel)]="password" type="text" class="form-control">
                 </div>
-                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                    <label for="" class="form-label">Username</label>
-                    <input name="username" [(ngModel)]="username" type="text" class="form-control">
-                </div>
-                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                    <label for="" class="form-label">Password</label>
-                    <input name="password" [(ngModel)]="password" type="text" class="form-control">
-                </div>
+               
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
-                    <button class="btn btn-success ">Add Employee</button>
+                    <button (click)="readValue()" class="btn btn-success ">Add Security</button>
                 </div>
                     
 
