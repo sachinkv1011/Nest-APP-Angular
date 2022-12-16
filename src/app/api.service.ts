@@ -50,5 +50,16 @@ export class ApiService {
   deleteSecurity=(data:any)=>{
     return this.http.post("http://localhost:8080/deleteSecurity",data)
   }
+  viewLog=()=>{
+    return this.http.get("http://localhost:8080/viewAllLogs")
+  }
+  addLog=(data:any)=>{
+    return this.http.post("http://localhost:8080/addlog",data)
+
+  }
+  exitLog=(data:any)=>{
+    return this.http.post("http://localhost:8080/logout",data)
+
+  }
 
 }

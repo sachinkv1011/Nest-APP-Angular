@@ -18,6 +18,10 @@ import { ViewSecurityComponent } from './view-security/view-security.component';
 import { SearchSecurityComponent } from './search-security/search-security.component';
 import { EmployeProfileComponent } from './employe-profile/employe-profile.component';
 import { UserNavComponent } from './user-nav/user-nav.component';
+import { SecurityLoginComponent } from './security-login/security-login.component';
+import { SecurityLogViewComponent } from './security-log-view/security-log-view.component';
+import { AddLogComponent } from './add-log/add-log.component';
+import { SecurityNavComponent } from './security-nav/security-nav.component';
 
 const myRoute:Routes=[
   {
@@ -46,6 +50,15 @@ const myRoute:Routes=[
   },
   {
     path:"employeeProfile",component:EmployeProfileComponent
+  },
+  {
+    path:"securityLog",component:SecurityLogViewComponent
+  },
+  {
+    path:"securityLogin",component:SecurityLoginComponent
+  },
+  {
+    path:"addLog",component:AddLogComponent
   }
 
 
@@ -67,7 +80,11 @@ const myRoute:Routes=[
     ViewSecurityComponent,
     SearchSecurityComponent,
     EmployeProfileComponent,
-    UserNavComponent
+    UserNavComponent,
+    SecurityLoginComponent,
+    SecurityLogViewComponent,
+    AddLogComponent,
+    SecurityNavComponent
   ],
   imports: [
     BrowserModule,
