@@ -22,6 +22,8 @@ import { SecurityLoginComponent } from './security-login/security-login.componen
 import { SecurityLogViewComponent } from './security-log-view/security-log-view.component';
 import { AddLogComponent } from './add-log/add-log.component';
 import { SecurityNavComponent } from './security-nav/security-nav.component';
+import { LeaveApplyComponent } from './leave-apply/leave-apply.component';
+import { LeaveStatusComponent } from './leave-status/leave-status.component';
 
 const myRoute:Routes=[
   {
@@ -59,6 +61,12 @@ const myRoute:Routes=[
   },
   {
     path:"addLog",component:AddLogComponent
+  },
+  {
+    path:"leaveApply",component:LeaveApplyComponent
+  },
+  {
+    path:"leaveStatus",component:LeaveStatusComponent
   }
 
 
@@ -84,7 +92,9 @@ const myRoute:Routes=[
     SecurityLoginComponent,
     SecurityLogViewComponent,
     AddLogComponent,
-    SecurityNavComponent
+    SecurityNavComponent,
+    LeaveApplyComponent,
+    LeaveStatusComponent
   ],
   imports: [
     BrowserModule,

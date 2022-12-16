@@ -62,4 +62,14 @@ export class ApiService {
 
   }
 
+  leaveDetails=(data:any)=>{
+    return this.http.post("http://localhost:8080/getLeaveDetails",data)
+  }
+  applyLeave=(data:any)=>{
+    return this.http.post("http://localhost:8080/addleave",data)
+  }
+  leaveDetailsId=(data:any)=>{
+    return this.http.post("http://localhost:8080/viewLeavesByEmpid",data)
+  }
+
 }

@@ -1,0 +1,49 @@
+<app-user-nav></app-user-nav>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3 mt-3">
+                <div class="card mb-3" >
+                    <div class="row g-3">
+                      <div class="col-md-4">
+                        <img src="http://netchex.com/wp-content/uploads/2021/06/page-headers-taller-employee-scheduling.png" class="card-img-top" alt="...">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h5 class="card-title" style="text-align: center;">Apply For Leave</h5>
+                          <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                            <label for="" class="form-label">Employee Id</label>
+                            <input name="empId" [(ngModel)]="empId" type="text"  class="form-control">
+                        </div>
+                        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                            <label for="" class="form-label">Type of Leave</label>
+                            <select class="form-select" aria-label="Default select example" name="type"
+                                [(ngModel)]="type">
+                                <option selected>Select Leave Type</option>
+                                <option value="casualLeave">Casual Leave</option>
+                                <option value="sickLeave">SickLeace</option>
+                                <option value="specialLeave">SpecialLeave</option>
+                            </select>
+                        </div>
+                        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                            <label for="" class="form-label">description</label>
+                            <input name="description" [(ngModel)]="description" type="text" class="form-control">
+                        </div>
+                        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                            <label for="" class="form-label">Leave Date</label>
+                            <input name="leaveDate" [(ngModel)]="leaveDate" type="date" id=""  class="form-control">
+                        </div>
+                        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+                            <br>
+                            <button (click)="readValue()" class="btn btn-dark">Apply</button>
+                        </div>
+                        <br>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            
+        </div>
+        </div>
+    </div>

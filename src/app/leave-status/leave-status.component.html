@@ -1,0 +1,31 @@
+<app-user-nav></app-user-nav>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Applied Date</th>
+                            <th scope="col">Leave Date</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Status</th>
+                          </tr>
+                        </thead>                         
+                        <tbody>
+                          <tr *ngFor="let i of leaves">
+                            <td>{{i.apply_date}}</td>
+                            <td>{{i.leave_date}}</td>
+                            <td>{{i.description}}</td>
+                            <td>{{i.type}}</td>
+                            <td >{{i.status}}</td>
+                          </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
