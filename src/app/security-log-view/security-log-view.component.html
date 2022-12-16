@@ -1,0 +1,31 @@
+<app-security-nav></app-security-nav>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Employee Id</th>
+                            <th scope="col">Check In</th>
+                            <th scope="col">Check Out</th>
+                            <th scope="col">Employee Name</th>
+                            <th scope="col">Designation</th>
+                          </tr>
+                        </thead>                         
+                        <tbody>
+                          <tr *ngFor="let i of data">
+                            <td>{{i.emp_id}}</td>
+                            <td>{{i.check_in}}</td>
+                            <td>{{i.out_date}}</td>
+                            <td>{{i.emp_name}}</td>
+                            <td >{{i.emp_designation}}</td>
+                          </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
