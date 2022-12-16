@@ -20,9 +20,6 @@ export class ApiService {
     return this.http.get("http://localhost:8080/viewAllEmployee")
   }
 
-  empLogin=(data:any)=>{
-    return this.http.post("http://localhost:8080/empLogin",data)
-  }
 
   deleteEmployee=(data:any)=>{
     return this.http.post("http://localhost:8080/deleteEmployee",data)
@@ -31,13 +28,16 @@ export class ApiService {
   employeeLogin=(data:any)=>{
     return this.http.post("http://localhost:8080/employeeLogin",data)
   }
+  employeeProfile=(data:any)=>{
+    return this.http.post("http://localhost:8080/employeeProfile",data)
+  }
+
 
   addSecurity=(data:any)=>{
     return this.http.post("http://localhost:8080/addSecurity",data)
   }
-
-  employeeProfile=(data:any)=>{
-    return this.http.post("http://localhost:8080/employeeProfile",data)
+  securityLogin=(data:any)=>{
+    return this.http.post("http://localhost:8080/securityLogin",data)
   }
 
   viewSecurity=()=>{
