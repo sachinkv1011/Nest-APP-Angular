@@ -24,10 +24,13 @@ import { AddLogComponent } from './add-log/add-log.component';
 import { SecurityNavComponent } from './security-nav/security-nav.component';
 import { LeaveApplyComponent } from './leave-apply/leave-apply.component';
 import { LeaveStatusComponent } from './leave-status/leave-status.component';
+import { AdminLeaveComponent } from './admin-leave/admin-leave.component';
+import { HomeComponent } from './home/home.component';
+import { HomeNavComponent } from './home-nav/home-nav.component';
 
 const myRoute:Routes=[
   {
-    path:"",component:AdminloginComponent
+    path:"adminLogin",component:AdminloginComponent
   },
   {
     path:"employeeLogin",component:EmployeeLoginComponent
@@ -67,6 +70,13 @@ const myRoute:Routes=[
   },
   {
     path:"leaveStatus",component:LeaveStatusComponent
+  },
+  {
+    path:"adminleave",component:AdminLeaveComponent
+  },
+
+  {
+    path:"",component:HomeComponent
   }
 
 
@@ -94,7 +104,10 @@ const myRoute:Routes=[
     AddLogComponent,
     SecurityNavComponent,
     LeaveApplyComponent,
-    LeaveStatusComponent
+    LeaveStatusComponent,
+    AdminLeaveComponent,
+    HomeComponent,
+    HomeNavComponent
   ],
   imports: [
     BrowserModule,

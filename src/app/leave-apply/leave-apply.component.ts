@@ -14,8 +14,8 @@ export class LeaveApplyComponent {
   leaveDate = ""
   leaveDetails:any = []
   constructor(private api:ApiService, private router:Router){
-      localStorage.getItem("userInfo")
-    this.empId = localStorage.getItem("userInfo")
+      localStorage.getItem("userId")
+    this.empId = localStorage.getItem("userId")
     console.log(this.empId)
     api.leaveDetails(this.empId).subscribe(
       (response:any)=>{

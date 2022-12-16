@@ -21,9 +21,18 @@ export class EmployeeLoginComponent {
     console.log(data)
     this.api.employeeLogin(data).subscribe(
       (response:any)=>{
-        let userId=response.userId;
-        localStorage.setItem("userId",userId)
-        this.route.navigate(['/employeeProfile'])
+        console.log(response)
+        if (response.status=="success") {
+          alert("login successful")
+          let userId=response.userId;
+          localStorage.setItem("userId",userId)
+          this.route.navigate(['/employeeProfile'])
+          
+        } else {
+          alert("oops! Invalid login")
+          
+        }
+        
 
       }
     )
