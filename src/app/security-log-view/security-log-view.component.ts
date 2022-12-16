@@ -10,7 +10,7 @@ export class SecurityLogViewComponent {
 
   data:any = []
   constructor(private api:ApiService){
-    api.viewLog().subscribe(
+    this.api.viewLog().subscribe(
       (response) =>{
         this.data = response
         

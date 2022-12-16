@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { ApiService } from '../api.service';
 
 @Component({
-  selector: 'app-leave-status',
-  templateUrl: './leave-status.component.html',
-  styleUrls: ['./leave-status.component.css']
+  selector: 'app-admin-leave',
+  templateUrl: './admin-leave.component.html',
+  styleUrls: ['./admin-leave.component.css']
 })
-export class LeaveStatusComponent { 
+export class AdminLeaveComponent  {
 
   constructor(private api:ApiService){
     let data:any = {
@@ -16,11 +16,13 @@ export class LeaveStatusComponent {
     this.api.leaveDetailsId(data).subscribe(
       (response:any)=>{
         console.log(response)
-        this.leaves=response
+        this.leave=response
+        // this.leave=localStorage.getItem("userId")
       }
     )
   }
-  leaves:any = []
+  leave:any = []
   loading:boolean = true
   
-  }
+
+}
