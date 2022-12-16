@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-view-security',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./view-security.component.css']
 })
 export class ViewSecurityComponent {
+
+  data:any = []
+  constructor(private api:ApiService){
+    this.api.viewSecurity().subscribe(
+      (response) => {
+        this.data = response;
+      }
+    )
+  }
+
 
 }
